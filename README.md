@@ -10,4 +10,4 @@ version.json
 最新设备列表json信息
 
 
-API:http://sh.122.gov.cn/m/placesitectrl/loadBusincessList?city=%E6%B2%AAA&page=1&size=10000&wdlxdm=29&ywfw=
+

@@ -1,6 +1,7 @@
 package com.trafficmonitor;
 
 import com.facebook.react.ReactActivity;
+import com.bee.baidumapview.BaiduMapModuleReactPackage;
 
 public class MainActivity extends ReactActivity {
 

@@ -1,3 +1,5 @@
 rootProject.name = 'TrafficMonitor'
 
 include ':app'
+include ':react-native-baidumapkit'
+project(':react-native-baidumapkit').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-baidumapkit/android')

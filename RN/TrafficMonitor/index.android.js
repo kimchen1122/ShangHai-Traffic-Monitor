@@ -12,21 +12,25 @@ import {
   View
 } from 'react-native';
 
+import BDMapModule from ('react-native-baidumapkit/BDMapModule');
+import BDMapView from ('react-native-baidumapkit');
+
 export default class TrafficMonitor extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
+      <BDMapView style={styles.mapViewStyle}
+                       ref={'locationMap'}
+                       isEnableClicked={true}
+                       range={this.state.range}
+                />
+ let value = {
+                "baidu_latitude"    :this.props["baidu_latitude"],
+                "baidu_longitude"   :this.props["baidu_longitude"],
+                "avatar"            :this.props.avatar
+            }
+BDMapModule.setLocation(React.findNodeHandle(this.refs.locationMap),value);
+BDMapModule.setLocationAnimation(React.findNodeHandle(this.refs.locationMap),value);
+BDMapModule.setRuler(React.findNodeHandle(this.refs.locationMap),20);         
     );
   }
 }
